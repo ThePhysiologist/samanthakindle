@@ -1,6 +1,4 @@
 body {
-  margin-left: -100px;
-  margin-top: -50px;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
     font-family: "Didact Gothic", Arial, sans-serif;
@@ -19,6 +17,8 @@ body {
     width: 600px;
     height: 800px;
     margin: 0 auto;
+    margin-left: 500px;
+    margin-top:-50px;
     background-color: white;
     padding: 15px;
     border-radius: 8px;
