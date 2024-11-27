@@ -1,0 +1,179 @@
+body {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+    font-family: "Didact Gothic", Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.didact-gothic-regular {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+    display:block;
+    width: 600px;
+    height: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+#haiku-display {
+  width: 35% !important;
+  display:inline-block;
+  margin: auto auto;
+}
+#haiku-text {
+    white-space: pre-line;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  position: relative;
+  top:-110px
+}
+#author-display {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    position:relative;
+    top:-120px;
+}
+#river-chart {
+    margin-top: 20px;
+}
+#weather-display, #forecast {
+    margin-top: 10px;
+    padding: 5px;
+    
+}
+.error-message {
+    color: #ff6b6b;
+    font-style: italic;
+    font-weight: bold;
+}
+.forecast-day {
+    display: inline-block;
+    width: 14%;
+    text-align: center;
+    margin: 5px;
+}
+.forecast-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+
+    .forecast-day {
+        flex: 1;
+        min-width: 100px;
+        text-align: center;
+        padding: 5px;
+        background-color: ;
+        border-radius: 5px;
+    }
+
+    .day-name {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .temp {
+        font-size: 1.3em;
+        margin: 5px 0;
+    }
+
+    .description {
+        font-size: 0.8em;
+        color: #666;
+        text-transform: capitalize;
+    }
+
+    #forecast {
+        margin-top: 10px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+#note {
+        background-color: #fff;
+        border-radius: 10px;
+        margin-top:-30px;
+}
+
+.rain-alert {
+        background-color: #e3f2fd;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .temp {
+        font-size: 1.1em;
+        margin: 5px 0;
+    }
+
+#weather-display {
+  width: 50%;
+  display:inline-block;
+  margin: auto auto;
+  margin-top: -90px;
+  margin-bottom:20px;
+}
+#iframe, #innerIframe {
+  width:600px;
+  margin:auto;
+  border: none;
+  height:300px;
+  overflow:hidden;
+ 
+}
+#iframe {
+  overflow : hidden;
+    position : relative;
+  margin-top:10px;  
+}
+#innerIframe {
+  position : absolute;
+    top      : -473px;
+    left     : -20px;
+    width    : 820px;
+    height   : 1400px;
+  -ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.75);
+        -webkit-transform-origin: 0 0;
+}
+#temperature {
+  font-weight:;
+  font-size: 3em;
+}
+#weatherIcon {
+  position:relative;
+  top:40px;
+  left: 20px
+}
+#river-temperature, #river-height {
+  font-size:1.3em;
+}
+#acknowledgment {
+  position:relative;
+  margin-top:10px;
+}
+#haiku-header {
+  position:relative;
+  top:-20px
+}
+#current-data {
+  font-size: .6em;
+  margin-top:-15px;
+}
