@@ -50,14 +50,11 @@
 <!-- partial -->
   <script  src="./script.js"></script>
 <script>
-  const iframe = document.getElementById('innerIframe');
-
-  iframe.onload = function() {
-    if (!sessionStorage.getItem('pageRefreshed')) {
-      sessionStorage.setItem('pageRefreshed', 'true');
-      location.reload();
-    }
-  };
+  if (document.referrer !== document.location.href) {
+    setTimeout(function() {
+        document.location.reload()
+  }, 5000);
+}
 </script>
 </body>
 </html>
