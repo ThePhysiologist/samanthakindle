@@ -50,10 +50,13 @@
 <!-- partial -->
   <script  src="./script.js"></script>
 <script>
-  if (document.referrer !== document.location.href) {
-    setTimeout(function() {
-        document.location.reload()
-  }, 5000);
+if (sessionStorage.getItem("is_reloaded")) {
+  // Page has already been reloaded
+  sessionStorage.removeItem("is_reloaded");
+} else {
+  // Page has not been reloaded, so reload it and set a flag
+  sessionStorage.setItem("is_reloaded", "true");
+  window.location.reload();
 }
 </script>
 </body>
