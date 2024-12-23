@@ -12,6 +12,10 @@ body {
   font-style: normal;
 }
 
+p {
+  margin-top:7px;
+  margin-bottom:7px;
+}
 .container {
     display:block;
     width: 600px;
