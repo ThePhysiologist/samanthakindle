@@ -85,13 +85,8 @@ body {
         margin-bottom: 5px;
     }
 
-    .temp {
-        font-size: 1.4em;
-        margin: 5px 0;
-    }
-
     .description {
-        font-size: 1em;
+        font-size: 1.2em;
         color: #666;
         text-transform: capitalize;
     }
@@ -117,7 +112,7 @@ body {
     }
 
     .temp {
-        font-size: 1.2em;
+        font-size: 1.4em;
         margin: 5px 0;
     }
 
@@ -156,7 +151,7 @@ body {
         -webkit-transform-origin: 0 0;
 }
 #temperature {
-  font-weight:700;
+  font-weight:400;
   font-size: 3em;
 }
 #weatherIcon {
@@ -170,13 +165,13 @@ body {
 }
 #acknowledgment {
   position:relative;
-  margin-top:10px;
+  margin-top:0px;
 }
 #haiku-header {
   position:relative;
   top:-20px
 }
 #current-data {
-  font-size: .7em;
+  font-size: .9em;
   margin-top:-15px;
 }
