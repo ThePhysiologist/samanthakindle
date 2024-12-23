@@ -40,14 +40,14 @@ p {
     margin-bottom: 10px;
     font-size:1.1em;
   position: relative;
-  top:-110px
+  top:-30px
 }
 #author-display {
     font-style: italic;
     font-size: 1em;
     margin-bottom: 20px;
     position:relative;
-    top:-120px;
+    top:-30px;
 }
 #river-chart {
     margin-top: 20px;
