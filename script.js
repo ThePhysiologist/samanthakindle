@@ -94,126 +94,6 @@ async function fetchRiverData(siteCode, parameterCode, startDate, endDate) {
         return null;
     }
 }
-async function createRiverChart() {
-    const endDate = new Date();
-    const startDate = new Date(endDate);
-    startDate.setDate(startDate.getDate() - 3);
-    const futureDate = new Date(endDate);
-    futureDate.setDate(futureDate.getDate() + 3);
-
-    const riverData = await fetchRiverData('02037500', '00065', startDate, futureDate);
-    if (!riverData) {
-        document.getElementById('river-chart').innerHTML = '<p class="error-message">Oops! The river data seems to have gone fishing. We\'re trying to reel it back in!</p>';
-        return;
-    }
-
-    // Sample fewer points (every 4 hours instead of every reading)
-    const sampledData = riverData.filter((_, index) => index % 8 === 0);
-
-    const labels = sampledData.map(d => {
-        const date = new Date(d.dateTime);
-        return date.toLocaleTimeString('en-US', { 
-            hour: 'numeric',
-            hour12: true,
-            weekday: 'short'
-        });
-    });
-    const values = sampledData.map(d => parseFloat(d.value));
-
-    // Calculate max value for y-axis
-    const maxValue = Math.max(...values);
-    const yAxisMax = maxValue > 12 ? maxValue + 1 : 12;
-
-    const ctx = document.getElementById('river-chart').getContext('2d');
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: labels,
-            datasets: [
-                // Main river level line
-                {
-                    label: 'River Level (ft)',
-                    data: values,
-                    fill: false,
-                    borderColor: 'rgb(75, 192, 192)',
-                    tension: 0.4,
-                    pointRadius: 0,
-                    pointBackgroundColor: 'rgb(75, 192, 192)',
-                    borderWidth: 3,
-                    z: 10 // Ensure this line appears on top
-                },
-                // Fill area above 9ft
-                {
-                    label: 'Above 9ft',
-                    data: values.map(() => 9),
-                    fill: '+1',
-                    backgroundColor: 'rgba(200, 200, 200, 0.2)',
-                    borderWidth: 0,
-                    pointRadius: 0,
-                    z: 1
-                },
-                // Fill area above 12ft
-                {
-                    label: 'Above 12ft',
-                    data: values.map(() => 12),
-                    fill: '+1',
-                    backgroundColor: 'rgba(150, 150, 150, 0.3)',
-                    borderWidth: 0,
-                    pointRadius: 0,
-                    z: 2
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            interaction: {
-                intersect: false,
-                mode: 'index'
-            },
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(context) {
-                            return labels[context[0].dataIndex];
-                        }
-                    }
-                },
-                legend: {
-                    display: false // Hide the legend since we don't need it
-                }
-            },
-            scales: {
-                y: {
-                    min: 0,
-                    max: yAxisMax,
-                    title: {
-                        display: true,
-                        text: 'River Level (ft)'
-                    },
-                    grid: {
-                        color: function(context) {
-                            if (context.tick.value === 9 || context.tick.value === 12) {
-                                return 'rgba(100, 100, 100, 0.5)';  // Darker line for important levels
-                            }
-                            return 'rgba(0, 0, 0, 0.1)';  // Default grid line color
-                        }
-                    }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Time'
-                    },
-                    ticks: {
-                        maxRotation: 45,
-                        minRotation: 45
-                    }
-                }
-            }
-        }
-    });
-}
-
 async function displayRiverInfo() {
     const currentDate = new Date();
     const yesterday = new Date(currentDate);
@@ -242,33 +122,44 @@ const weatherPhrases = {
         "Feels like the surface of the sun out there.",
         "You could fry an egg on the sidewalk.",
         "It's hotter than a jalapeño's armpit!",
-        "Time to become one with your air conditioner."
+        "Time to become one with your air conditioner.",
+        "It's a steamy one out there.",
+        "It's super hot. Maybe get naked?"
     ],
     warm: [
         "It's pretty warm out there.",
         "Perfect weather for shorts and shades!",
         "Grab a cold drink and enjoy the warmth.",
         "Feels like summer's giving us a big hug.",
-        "Warm enough to make you appreciate shade."
+        "Warm enough to make you appreciate shade.",
+        "Not too hot, but warm indeed.",
+        "The sun'll get ya but the weather's not bad."
     ],
     pleasant: [
         "The weather's quite pleasant.",
         "It's a perfect day for a picnic!",
         "Goldilocks would approve - not too hot, not too cold.",
-        "Weather so nice, you'll want to bottle it up."
+        "Weather so nice, you'll want to bottle it up.",
+        "It's pretty much perfect.",
+        "Maybe on the cool side, but nice!",
+        "A day to enjoy."
     ],
     cool: [
         "It's a bit chilly", 
       "You might want to grab a light jacket.",
         "Perfect weather for a brisk walk",
         "Sweater weather is upon us!",
-      "It's a chilly one out there"
+      "It's a chilly one out there",
+      "Grab yourself a jacket.",
+      "Maybe nice for running."
     ],
     cold: [
         "Grab a jacket, it's cold!",
         "Brrr! Time to bundle up!",
         "It's nippy enough to make a polar bear shiver.",
-        "You might see your breath out there!"
+        "You might see your breath out there!",
+        "It's a cold one, watch out!",
+        "Find your gloves and hat."
     ],
     rainy: [
         "It's raining cats and dogs!",
@@ -356,6 +247,8 @@ const city = 'Richmond,US';
            minute: '2-digit',
            hour12: true
        });
+       const sunsetEasternTime = sunset.toLocaleString('en-US', { timeZone: 'America/New_York' });
+       const sunriseEasternTime = sunrise.toLocaleString('en-US', { timeZone: 'America/New_York' });
 
         // Update the display
         weatherDisplay.innerHTML = `
@@ -366,11 +259,11 @@ const city = 'Richmond,US';
             <div class="sun-times">
                <div class="sunrise">
                    <span>Sunrise is at</span>
-                   <span>${sunrise}</span>
+                   <span>${sunriseEasternTime}</span>
                </div>
                <div class="sunset">
                    <span> Sunset is at</span>
-                   <span>${sunset}</span>
+                   <span>${sunsetEasternTime}</span>
                </div>
            </div>
         `;

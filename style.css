@@ -15,7 +15,7 @@ body {
 .container {
     display:block;
     width: 600px;
-    height: 800px;
+    height: 790px;
     margin: 0 auto;
     margin-left: -25px;
     margin-top:-30px;
@@ -38,7 +38,7 @@ body {
 }
 #author-display {
     font-style: italic;
-    font-size: 0.9em;
+    font-size: 1.1em;
     margin-bottom: 20px;
     position:relative;
     top:-120px;
@@ -86,12 +86,12 @@ body {
     }
 
     .temp {
-        font-size: 1.3em;
+        font-size: 1.4em;
         margin: 5px 0;
     }
 
     .description {
-        font-size: 0.8em;
+        font-size: 1em;
         color: #666;
         text-transform: capitalize;
     }
@@ -117,7 +117,7 @@ body {
     }
 
     .temp {
-        font-size: 1.1em;
+        font-size: 1.2em;
         margin: 5px 0;
     }
 
@@ -156,7 +156,7 @@ body {
         -webkit-transform-origin: 0 0;
 }
 #temperature {
-  font-weight:;
+  font-weight:700;
   font-size: 3em;
 }
 #weatherIcon {
@@ -165,7 +165,8 @@ body {
   left: 20px
 }
 #river-temperature, #river-height {
-  font-size:1.3em;
+  font-size:1.4em;
+  font-weight:700;
 }
 #acknowledgment {
   position:relative;
@@ -176,6 +177,6 @@ body {
   top:-20px
 }
 #current-data {
-  font-size: .6em;
+  font-size: .7em;
   margin-top:-15px;
 }
