@@ -23,7 +23,7 @@ body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    font-size:1em;
+    font-size:1.1em;
 }
 #haiku-display {
   width: 35% !important;
@@ -39,7 +39,7 @@ body {
 }
 #author-display {
     font-style: italic;
-    font-size: 1.1em;
+    font-size: 1em;
     margin-bottom: 20px;
     position:relative;
     top:-120px;
@@ -87,7 +87,7 @@ body {
     }
 
     .description {
-        font-size: 1.2em;
+        font-size: 1em;
         color: #666;
         text-transform: capitalize;
     }
@@ -113,7 +113,7 @@ body {
     }
 
     .temp {
-        font-size: 1.4em;
+        font-size: 1.3em;
         margin: 5px 0;
     }
 
@@ -161,7 +161,7 @@ body {
   left: 20px
 }
 #river-temperature, #river-height {
-  font-size:1.4em;
+  font-size:1.3em;
   font-weight:700;
 }
 #acknowledgment {

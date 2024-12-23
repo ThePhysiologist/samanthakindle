@@ -254,7 +254,6 @@ const city = 'Richmond,US';
         weatherDisplay.innerHTML = `
             <p><span id="temperature">${temp}°F</span>
             <span>${description}</span><span></span></p>
-            <p>${weatherPhrase}</p>
             <p>Wind is ${windSpeed}mph from the ${windDirection}</p>
             <div class="sun-times">
                <div class="sunrise">
