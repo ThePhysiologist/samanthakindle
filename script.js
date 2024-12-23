@@ -312,6 +312,7 @@ async function updateForecast() {
                     date: item.dt,
                     minTemp: temp,
                     maxTemp: temp,
+                    icon: item.weather[0].icon,
                     description: item.weather[0].description
                 };
             } else {
