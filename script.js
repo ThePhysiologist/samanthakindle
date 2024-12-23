@@ -374,7 +374,6 @@ async function fetchRiverData(siteCode, parameterCode, startDate, endDate) {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded');
     displayHaiku();
-    createRiverChart();
     displayRiverInfo();
     updateWeather();
     updateForecast();
