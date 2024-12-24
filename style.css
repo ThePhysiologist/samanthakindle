@@ -174,7 +174,7 @@ p {
 }
 #acknowledgment {
   position:relative;
-  margin-top:0px;
+  margin-top:-4px;
 }
 #haiku-header {
   position:relative;
