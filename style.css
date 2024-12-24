@@ -34,7 +34,7 @@ p {
   width: 40% !important;
   display:inline-block;
   margin: auto auto;
-  padding-left:30px;
+  padding-left:38px;
 }
 #haiku-text {
     white-space: pre-line;
@@ -185,5 +185,5 @@ p {
   margin-top:-15px;
 }
 #temp-paragraph {
-  padding-top:80px;
+  padding-top:110px;
 }
