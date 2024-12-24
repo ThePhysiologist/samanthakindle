@@ -78,6 +78,7 @@ p {
         gap: 5px;
         margin-top: -20px;
         margin-bottom: 20px;
+        margin-right:40px;
     }
 
     .forecast-day {
@@ -168,7 +169,7 @@ p {
   left: 20px
 }
 #river-temperature, #river-height {
-  font-size:1.3em;
+  font-size:1.1em;
   font-weight:700;
 }
 #acknowledgment {
