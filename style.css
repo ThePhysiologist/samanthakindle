@@ -17,7 +17,7 @@ p {
 }
 .container {
     display:block;
-    padding-top:20px;
+    padding-top:60px;
     width: 600px;
     height: 800px;
     margin: 0 auto;
@@ -34,6 +34,7 @@ p {
   width: 40% !important;
   display:inline-block;
   margin: auto auto;
+  padding-left:30px;
 }
 #haiku-text {
     white-space: pre-line;
@@ -42,6 +43,7 @@ p {
     font-size:1.1em;
   position: relative;
   top:-30px
+  
 }
 #author-display {
     font-style: italic;

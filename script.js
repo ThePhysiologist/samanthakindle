@@ -109,7 +109,7 @@ async function displayRiverInfo() {
         const tempTime = new Date(latestTemp.dateTime).toLocaleString([], {month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit', hour12: true});
         const tempCelsius = parseFloat(latestTemp.value);
         const tempFahrenheit = (tempCelsius * 9/5) + 32;
-        riverInfoElement.innerHTML += `<p>The James is<span id="river-temperature"> ${tempFahrenheit.toFixed(0)}°F</span> and at <span id="river-height">${levelData[0].value}ft</span></p><p id="current-data">Data current as of ${tempTime}</p>`;
+        riverInfoElement.innerHTML += `<p>The James is<span id="river-temperature"> ${tempFahrenheit.toFixed(0)}°F</span> and at <span id="river-height">${levelData[0].value}ft</span></p>`;
     } else {
         riverInfoElement.innerHTML += '<p class="error-message">Looks like our temperature sensor decided to go for a swim.</p>';
     }
