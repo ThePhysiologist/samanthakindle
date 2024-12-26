@@ -43,10 +43,36 @@ const haiku = [
       {text: "dune pine\nthe low branch\n sweeping sand",
     author: "Dee Evetts"
     },
-      {text: "she dreams\nher hand fluttering\nwithin mine",
-    author: "Dee Evetts"
+      {text: "forest-bathing\nseeing the potential\nwidowmakers",
+    author: "Nathaniel Tico"
     },
+    {text: "she dreams\nher hand fluttering\nwithin mine",
+        author: "Dee Evetts"
+        },
+    {text: "learning the name\nof a tune loved since childhood\nwhite-crowned sparrow",
+        author: "Nathaniel Tico"
+    },
+    {text: "high noon\nturtles sunning themselves\non a lake log",
+        author: "Nathaniel Tico"
+        },
+    {text: "autumn afternoon…\nI walk around inside\na Van Gogh",
+        author: "Ed Bremson"
+            },
+    {text: "dessert menu\nthe hairs on her arm\ntouch mine",
+        author: "Dee Evetts"
+                },
+     {text: "in the downpour\ninstead of an umbrella\na childish smile",
+         author: "Nina Kovacic"
+                    },
+     {text: "star-peppered sky\nsome of them\nextinct already",
+         author: "Nina Kovacic"
+                        },
+     {text: "on a winter day\nyou bring simple joy to me\na kiss, laugh, and smile",
+         author: "Luke Hollomon"
+                            },
+    
 ];
+
 
 function getDailyHaiku() {
     const today = new Date();
