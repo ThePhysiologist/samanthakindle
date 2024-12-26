@@ -70,6 +70,30 @@ const haiku = [
      {text: "on a winter day\nyou bring simple joy to me\na kiss, laugh, and smile",
          author: "Luke Hollomon"
                             },
+     {text: "I am here\nyou are here\nbuttercups",
+         author: "Robert Epstein"
+        },
+     {text: "in pine shade\nfor a while I forget\nthis life will end",
+     author: "Robert Epstein"
+                               },    
+    {text: "in pine shade\nfor a while I forget\nthis life will end",
+         author: "Robert Epstein"
+             },
+    {text: "in pine shade\nfor a while I forget\nthis life will end",
+    author: "Robert Epstein"
+        },
+        {text: "some babble\nworth listening to—\nmountain brook",
+            author: "Terri L. French"
+           },
+           {text: "mountain sunset\na bit of the day left\nin warm stones",
+            author: "Terri L. French"
+           },
+           {text: "autumn clothesline\nthe same old innerwear\ntaking turns",
+            author: "Lakshmi Iyer"
+           },
+           {text: "peach orchard\nbarrels filled\nwith sunset",
+            author: "Susan Burch"
+           },    
     
 ];
 
