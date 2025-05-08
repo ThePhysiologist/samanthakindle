@@ -783,9 +783,10 @@ const city = 'Richmond,US';
        const sunsetEasternTime = new Intl.DateTimeFormat('en-US', options).format(utcSunset);
         // Update the display
         weatherDisplay.innerHTML = `
-            <p id="tempParagraph" style="padding-top: 80px;"><span id="temperature">${temp}°F</span>
+            <p id="tempParagraph" style="padding-top: 40px;"><span id="temperature">${temp}°F</span>
             <span>${description}</span><span></span></p>
             <p>Wind is ${windSpeed}mph from the ${windDirection}</p>
+            <p>The humidity is ${humidity}%</p>
             <div class="sun-times">
                <div class="sunrise">
                    <span>Sunrise is at</span>
