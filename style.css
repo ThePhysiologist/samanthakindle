@@ -17,7 +17,7 @@ p {
 }
 .container {
     display:block;
-    padding-top:80px;
+    padding-top:40px !important;
     width: 600px;
     height: 800px;
     margin: 0 auto;
