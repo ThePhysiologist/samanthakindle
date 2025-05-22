@@ -17,7 +17,7 @@ p {
 }
 .container {
     display:block;
-    padding-top:40px !important;
+    padding-top:50px !important;
     width: 600px;
     height: 800px;
     margin: 0 auto;
@@ -136,7 +136,7 @@ p {
   width:600px;
   margin:auto;
   border: none;
-  height:280px;
+  height:270px;
   overflow:hidden;
  
 }
